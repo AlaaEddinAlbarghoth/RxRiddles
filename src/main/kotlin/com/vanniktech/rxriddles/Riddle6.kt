@@ -11,6 +11,6 @@ object Riddle6 {
    * Use case: Execute two network requests in parallel and wait for each other and process the combined data.
    */
   fun solve(first: Single<Int>, second: Single<Int>): Single<Pair<Int, Int>> {
-    TODO()
+    return Single.zip(first, second) { t1, t2 -> t1 to t2 }
   }
 }
