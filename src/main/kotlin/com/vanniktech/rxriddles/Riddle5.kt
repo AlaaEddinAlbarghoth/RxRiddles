@@ -9,6 +9,6 @@ object Riddle5 {
    * Use case: Two input fields in a calculator that need to be summed up and the result should be updated every time one of the inputs change.
    */
   fun solve(first: Observable<Int>, second: Observable<Int>): Observable<Int> {
-    TODO()
+    return Observable.combineLatest(first, second) { f, l -> f + l}
   }
 }
